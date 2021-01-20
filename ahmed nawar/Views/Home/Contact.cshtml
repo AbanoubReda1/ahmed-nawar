@@ -1,0 +1,132 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner_wrap">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+
+
+        <!-- Main Header-->
+        <!--End Main Header -->
+        <!--Page Title-->
+        <section class="page-title" style="background-image:url(/images/background/bg-4.jpg)">
+            <div class="auto-container">
+                <ul class="bread-crumb">
+                    <li><a href="index-2.html">Home</a></li>
+                    <li>Contact</li>
+                </ul>
+                <h1>Contact</h1>
+            </div>
+        </section>
+        <!--End Page Title-->
+        <!-- Contact Form Section -->
+        <!-- Contact Info Section -->
+        <section class="contact-info-section sp-two">
+            <div class="auto-container">
+                <div class="row">
+
+
+
+                    <div class="col-lg-8  contact-info-block">
+
+
+                        <div class="wrapper-box">
+                            <div class="contact-form-area">
+                                <div class="sec-title mb-50 text-center">
+                                    <div class="sub-title">Contact with us</div>
+                                    <h1>Do you have any question? <br>write us a message</h1>
+                                </div>
+                                <!-- Contact Form -->
+                                <div class="contact-form">
+                                    <div id="form-messages"></div>
+                                    <form method="post" action="http://html.tonatheme.com/2019/Nextin/inc/sendmail.php" id="ajax-contact">
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-12 form-group field">
+                                                <input type="text" id="Name" name="Name" placeholder="Your Name" required>
+                                            </div>
+
+                                            <div class="col-lg-12 form-group field">
+                                                <input type="Email" id="Email" name="Email" placeholder="Email Address" required>
+                                            </div>
+
+                                            <div class="col-lg-12 form-group field">
+                                                <textarea id="Massage" name="Massage" placeholder="Write Message" required></textarea>
+                                            </div>
+
+                                            <div class="col-lg-12 form-group text-center field">
+                                                <button type="submit" name="submit-form" class="theme-btn btn-style-four border-anim-left"><span class="border-anim-right"></span>SEND MESSAGE</button>
+                                            </div>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="col-lg-4  contact-info-block">
+
+
+
+                        <div class="wrapper-box">
+                            <div class="contact-form-area">
+                                <div class="sec-title mb-50 text-center">
+                                    <div class="sub-title">Contact with us</div>
+
+                                </div>
+                                <!-- Contact Form -->
+
+                            </div>
+                        </div>
+
+
+
+                        Contact with us
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Map Section -->
+        <section class="contact-map-section">
+            <div class="outer-container">
+                <div class="map-outer">
+                    <div class="map-canvas"
+                         data-zoom="12"
+                         data-lat="-37.817085"
+                         data-lng="144.955631"
+                         data-type="roadmap"
+                         data-hue="#ffc400"
+                         data-title="Envato"
+                         data-icon-path="images/icons/map-marker.png"
+                         data-content="Melbourne VIC 3000, Australia<br><a href='mailto:info@youremail.com'>info@youremail.com</a>">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Map Section -->
+        <!-- Main Footer -->
+        <!-- End Main Footer -->
+
+    </div>
+}

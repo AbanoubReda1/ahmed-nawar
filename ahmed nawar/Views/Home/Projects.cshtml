@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ahmed_nawar.Models.Project>
+
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+}
+
+
+
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner_wrap">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Main Header-->
+    <!--End Main Header -->
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url(/images/background/bg-4.jpg)">
+        <div class="auto-container">
+            <ul class="bread-crumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Art Project</a></li>
+
+            </ul>
+            <h1>Art Project</h1>
+        </div>
+    </section>
+    <!--End Page Title-->
+    <!-- Our Projects -->
+    <section class="our-projects style-two sp-two">
+        <div class="auto-container">
+            <div class="row">
+                
+                   
+
+
+                        <!-- Project Block One -->
+                        <div class="project-block-one col-lg-4 col-md-6">
+                            <div class="inner-box">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="image">
+
+                                        <img src="@Url.Content(item.Image)" alt="">
+                                        <div class="overlay">
+
+                                            <a class="lightbox-image" href="@Url.Content(item.Image)" data-fancybox-group="example-portfolio"><span class="flaticon-round-add-button"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="@Url.Action("Details", "Projects", new { id = item.Id })">@Html.DisplayFor(modelItem => item.Name)</a></h3>
+
+                                    </div>
+                                }
+                                </div>
+                        </div>
+
+                
+                </div>
+
+
+        </div>
+
+    </section>
+    <!-- Main Footer -->
+    <!-- End Main Footer -->
+
+</div>
